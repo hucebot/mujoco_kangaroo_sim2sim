@@ -17,3 +17,13 @@ The folder `script` contains a simple policy runner (`run_policy.py`) and three 
 ### Notes
 
 The MuJoCo model of the Kangaroo robot is inside the folder `mujoco_kangaroo_sim2sim/kangaroo_mujoco`.
+
+## BibTeX
+
+```
+@article{amadio2025learning,
+  title={Learning to Walk with Hybrid Serial-Parallel Linkages: a Case Study on the Kangaroo Robot},
+  author={Amadio, Fabio and Li, Hongbo and Uttini, Lorenzo and Ivaldi, Serena and Modugno, Valerio and Hoffman, Enrico Mingo},
+  year={2025}
+}
+```
