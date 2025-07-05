@@ -1,0 +1,12 @@
+<mujoco model="kangaroo_left_leg_velocity_controllers">
+	
+	<actuator>
+    		<velocity name="leg_left_1_actuator_velocity" joint="leg_left_1_motor" kv="1000" ctrllimited="true" ctrlrange="-0.4 0.4"/>
+		<velocity name="leg_left_2_actuator_velocity" joint="leg_left_2_motor" kv="1000" ctrllimited="true" ctrlrange="-0.4 0.4"/>
+		<velocity name="leg_left_3_actuator_velocity" joint="leg_left_3_motor" kv="1000" ctrllimited="true" ctrlrange="-0.4 0.4"/>
+		<velocity name="leg_left_length_actuator_velocity" joint="leg_left_length_motor" kv="10000" ctrllimited="true" ctrlrange="-0.625 0.625"/>
+		<velocity name="leg_left_4_actuator_velocity" joint="leg_left_4_motor" kv="5000" ctrllimited="true" ctrlrange="-0.4 0.4"/>
+		<velocity name="leg_left_5_actuator_velocity" joint="leg_left_5_motor" kv="5000" ctrllimited="true" ctrlrange="-0.4 0.4"/>
+	</actuator>
+		
+</mujoco>

@@ -1,0 +1,50 @@
+<mujoco model="kangaroo_visual_assets">
+	
+	<mesh name="torso" file="Torso.STL" />
+        
+        <mesh name="base_link" file="base_link.STL" />
+        <mesh name="Yaw_motor" file="Yaw_motor.STL" />
+        <mesh name="Hip_yaw" file="Hip_yaw.STL" />
+        <mesh name="Yaw_rod" file="Yaw_rod.STL"/>
+        <mesh name="Hip_roll" file="Hip_roll.STL"/>
+        <mesh name="Hip_pitch" file="Hip_pitch.STL"/>
+        <mesh name="Hip_differential_internal_cradle" file="Hip_differential_internal_cradle.STL" /> 
+        <mesh name="Hip_differential_internal_UnivJoint" file="Hip_differential_internal_UnivJoint.STL" />
+        <mesh name="Hip_differential_internal_motor" file="Hip_differential_internal_motor.STL" scale="1 -1 1"/> 
+        <mesh name="Hip_differential_internal_rod" file="Hip_differential_internal_rod.STL" scale="1 1 -1"/>
+        <mesh name="Hip_differential_internal_rod1" file="Hip_differential_internal_rod.STL" scale="-1 1 -1"/>
+        
+        <mesh name="Yaw_motor1" file="Yaw_motor.STL" scale="1 -1 1" />
+        <mesh name="Hip_yaw1" file="Hip_yaw.STL" scale="1 -1 1" />
+        <mesh name="Yaw_rod1" file="Yaw_rod.STL" scale="1 1 -1"/>
+        <mesh name="Hip_roll1" file="Hip_roll.STL" scale="-1 1 1" />
+        <mesh name="Hip_pitch1" file="Hip_pitch.STL" scale="-1 1 1"/>
+        <mesh name="Hip_differential_internal_cradle1" file="Hip_differential_internal_cradle.STL" scale="-1 1 1" />
+        <mesh name="Hip_differential_internal_UnivJoint1" file="Hip_differential_internal_UnivJoint.STL" scale="-1 1 1"/>
+        <mesh name="Hip_differential_internal_cradle2" file="Hip_differential_internal_cradle.STL" scale="1 1 -1" />
+        <mesh name="Hip_differential_internal_cradle3" file="Hip_differential_internal_cradle.STL" scale="-1 1 -1" />
+        
+        <mesh name="Femour_pitch" file="Femour_pitch.STL" />
+        <mesh name="Knee" file="Knee.STL" />
+        <mesh name="Femour_pitch1" file="Femour_pitch.STL" scale="1 1 -1" />
+        <mesh name="Leg_length_slidinig_nut" file="Leg_length_slidinig_nut.STL"/>
+        <mesh name="Leg_length_short_bars" file="Leg_length_short_bars.STL"/>
+        <mesh name="Rear_triangle" file="Rear_triangle.STL" />
+        <mesh name="Rear_long_bar" file="Rear_long_bar.STL" />
+        <mesh name="Rear_short_bar" file="Rear_short_bar.STL" />
+        
+        <mesh name="External_butterfly" file="External_butterfly.STL" />
+        <mesh name="External_higher_ankle_bar" file="External_higher_ankle_bar.STL" />
+        <mesh name="External_lower_ankle_bar" file="External_lower_ankle_bar.STL" />
+        <mesh name="External_butterfly1" file="External_butterfly.STL" scale="1 1 -1" />
+        <mesh name="External_higher_ankle_bar1" file="External_higher_ankle_bar.STL" scale="1 1 -1" /> 
+        <mesh name="External_ankle_ball" file="External_ankle_ball.STL"/>
+        <mesh name="Ankle_roll" file="Ankle_roll.STL"/>
+        <mesh name="Ankle_pitch" file="Ankle_pitch.STL"/>
+        <mesh name="External_knee_ball" file="External_knee_ball.STL"/>
+        <mesh name="Ankle_external_motor" file="Ankle_external_motor.STL"/>
+        <mesh name="Ankle_external_rod" file="Ankle_external_rod.STL"/>
+        <mesh name="Ankle_external_pendulum" file="Ankle_external_pendulum.STL"/>
+        <mesh name="Ankle_external_pendulum1" file="Ankle_external_pendulum.STL" scale="1 1 -1"/>
+
+</mujoco>

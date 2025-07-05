@@ -1,0 +1,12 @@
+<mujoco model="kangaroo_left_leg_position_controllers">
+	
+	<actuator>
+    	<position name="leg_left_1_actuator_position" 		joint="leg_left_1_motor" 		kp="300000"  timeconst="0" ctrllimited="true" ctrlrange="-0.02 0.02" forcelimited="true" forcerange="-3000 3000"/>
+		<position name="leg_left_2_actuator_position" 		joint="leg_left_2_motor" 		kp="700000"  timeconst="0" ctrllimited="true" ctrlrange="-0.04 0.04" forcelimited="true" forcerange="-3000 3000"/>
+		<position name="leg_left_3_actuator_position" 		joint="leg_left_3_motor" 		kp="700000"  timeconst="0" ctrllimited="true" ctrlrange="-0.04 0.04" forcelimited="true" forcerange="-3000 3000"/>
+		<position name="leg_left_length_actuator_position" 	joint="leg_left_length_motor" 	kp="1000000" timeconst="0" ctrllimited="true" ctrlrange="0 0.15"	 forcelimited="true" forcerange="-5000 5000"/>
+		<position name="leg_left_4_actuator_position" 		joint="leg_left_4_motor" 		kp="800000"  timeconst="0" ctrllimited="true" ctrlrange="-0.02 0.02" forcelimited="true" forcerange="-3000 3000"/>
+		<position name="leg_left_5_actuator_position" 		joint="leg_left_5_motor" 		kp="800000"  timeconst="0" ctrllimited="true" ctrlrange="-0.02 0.02" forcelimited="true" forcerange="-3000 3000"/>
+	</actuator>
+		
+</mujoco>

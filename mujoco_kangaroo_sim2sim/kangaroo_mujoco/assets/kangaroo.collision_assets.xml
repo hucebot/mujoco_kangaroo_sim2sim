@@ -1,0 +1,27 @@
+<mujoco model="kangaroo_collision_assets">
+	
+	<mesh name="torso_collision" file="simple/Torso.STL" />
+	<mesh name="base_link_collision" file="simple/base_link.STL" />
+	<mesh name="Yaw_motor_collision" file="simple/Yaw_motor.STL" />
+	<mesh name="Hip_yaw_collision" file="simple/Hip_yaw.STL" />
+    	<mesh name="Ankle_roll_collision" file="simple/Ankle_roll.STL"/>
+    	<mesh name="Knee_collision" file="simple/Knee.STL"/>
+    	<mesh name="Femour_pitch_collision" file="simple/Femour_pitch.STL"/>
+    	<mesh name="Hip_roll_collision" file="simple/Hip_roll.STL"/>
+    	<mesh name="Hip_roll1_collision" file="simple/Hip_roll.STL" scale="-1 1 1"/>
+    	<mesh name="Hip_differential_internal_cradle_collision" file="simple/Hip_differential_internal_cradle.STL" />
+    	<mesh name="Hip_differential_internal_cradle2_collision" file="simple/Hip_differential_internal_cradle.STL" scale="-1 1 1"/>
+    	<mesh name="Rear_triangle_collision" file="simple/Rear_triangle.STL" />
+    	<mesh name="Rear_long_bar_collision" file="simple/Rear_long_bar.STL" />
+    	<mesh name="External_butterfly_collision" file="simple/External_butterfly.STL" />
+    	<mesh name="External_butterfly1_collision" file="simple/External_butterfly.STL" scale="1 1 -1"/>
+    	<mesh name="External_higher_ankle_bar_collision" file="simple/External_higher_ankle_bar.STL" />
+    	<mesh name="External_higher_ankle_bar1_collision" file="simple/External_higher_ankle_bar.STL" scale="1 1 -1"/>
+    	<mesh name="External_lower_ankle_bar_collision" file="simple/External_lower_ankle_bar.STL" />
+    	
+    	<mesh name="Yaw_motor1_collision" file="simple/Yaw_motor.STL" scale="1 -1 1" />
+    	<mesh name="Hip_yaw1_collision" file="simple/Hip_yaw.STL" scale="1 -1 1" />
+    	<mesh name="Hip_differential_internal_cradle3_collision" file="simple/Hip_differential_internal_cradle.STL" scale="-1 1 -1" />
+    	<mesh name="Hip_differential_internal_cradle22_collision" file="simple/Hip_differential_internal_cradle.STL" scale="1 1 -1" />
+
+</mujoco>

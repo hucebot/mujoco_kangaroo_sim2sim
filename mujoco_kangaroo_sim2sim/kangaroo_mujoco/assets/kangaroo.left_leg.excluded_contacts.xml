@@ -1,0 +1,38 @@
+<mujoco model="kangaroo_left_leg_excluded_contacts">
+
+	<exclude body1="left_yaw_motor" body2="torso" />
+	<exclude body1="left_hip_yaw" body2="torso" />
+
+	<exclude body1="base_link" body2="left_yaw_motor" />
+    	<exclude body1="left_hip_roll" body2="left_hip_yaw" />
+    	<exclude body1="base_link" body2="left_hip_yaw" />
+    	
+    	<exclude body1="base_link" body2="left_hip_differential_3_cradle" />
+    	<exclude body1="left_hip_yaw" body2="left_hip_differential_3_cradle" />
+    	
+    	<exclude body1="base_link" body2="left_hip_differential_2_cradle" />
+    	<exclude body1="left_hip_yaw" body2="left_hip_differential_2_cradle" />
+    	<exclude body1="left_hip_differential_3_cradle" body2="left_hip_differential_2_cradle" />   
+    	 	
+    	<exclude body1="left_knee" body2="left_ankle_roll" />
+    	
+    	<exclude body1="left_rear_triangle" body2="left_hip_roll" />
+    	<exclude body1="left_rear_triangle" body2="left_femour_pitch" />
+    	
+    	<exclude body1="left_knee" body2="left_rear_long_bar" />
+    	<exclude body1="left_femour_pitch" body2="left_rear_long_bar" />
+    	
+    	<exclude body1="left_5_butterfly" body2="left_femour_pitch" />
+    	<exclude body1="left_5_butterfly" body2="left_knee" />
+    	<exclude body1="left_5_butterfly" body2="left_5_higher_ankle_bar" />
+    	<exclude body1="left_5_butterfly" body2="left_5_lower_ankle_bar" />
+    	<exclude body1="left_femour_pitch" body2="left_5_lower_ankle_bar" />
+    	
+    	<exclude body1="left_4_butterfly" body2="left_femour_pitch" />
+    	<exclude body1="left_4_butterfly" body2="left_knee" />
+    	<exclude body1="left_4_butterfly" body2="left_4_higher_ankle_bar" />
+    	<exclude body1="left_4_butterfly" body2="left_4_lower_ankle_bar" />
+    	<exclude body1="left_femour_pitch" body2="left_4_lower_ankle_bar" />
+    	
+
+</mujoco>

@@ -1,0 +1,29 @@
+<mujoco model="kangaroo_left_leg_equality_constraints">
+
+<equality>
+	<connect anchor="0 0 0" body1="left_yaw_rod" body2="left_hip_yaw" name="left_hip_yaw_closed" solref="0.005 1"/>
+	
+	<connect anchor="-0.015 0. 0." body1="left_hip_differential_2_univ" body2="left_hip_differential_2_rod" name="left_hip_differential_2a" solref="0.005 1"/>
+	<connect anchor="0.015 0. 0." body1="left_hip_differential_2_univ" body2="left_hip_differential_2_rod" name="left_hip_differential_2b" solref="0.005 1"/>
+	<connect anchor="-0.015 0. 0" body1="left_hip_differential_3_univ" body2="left_hip_differential_3_rod" name="left_hip_differential_3a" solref="0.005 1"/>
+	<connect anchor="0.015 0. 0" body1="left_hip_differential_3_univ" body2="left_hip_differential_3_rod" name="left_hip_differential_3b" solref="0.005 1"/>
+	
+	<connect anchor="-0.007844 -0.089658 0" body1="left_knee" body2="left_leg_length_short_bars" name="left_knee_closed" solref="0.005 1"/>
+	<connect anchor="-0.038637 0.010353 0" body1="left_femour_pitch" body2="left_rear_triangle" name="left_rear_triangle_closed_1" solref="0.005 1"/>
+	<connect anchor="0 -0.40427 0" body1="left_rear_long_bar" body2="left_knee" name="left_rear_triangle_closed_2" solref="0.005 1"/>
+	
+	<connect anchor="0 0 0" body1="left_ankle_5_rod" body2="left_ankle_5_pendulum" name="left_ankle_hip_5_closed" solref="0.005 1"/>
+	<connect anchor="0 0 0" body1="left_ankle_4_rod" body2="left_ankle_4_pendulum" name="left_ankle_hip_4_closed" solref="0.005 1"/>
+	<connect anchor="-0.045963 -0.038567 -0.03" body1="left_5_butterfly" body2="left_5_higher_ankle_bar" name="left_butterfly_5_closed" solref="0.005 1"/>
+	<connect anchor="-0.045963 -0.038567 0.03" body1="left_4_butterfly" body2="left_4_higher_ankle_bar" name="left_butterfly_4_closed" solref="0.005 1"/>
+	
+	<!--connect anchor=" 0. 0. 0.01    " body1="left_5_ankle_ball" body2="left_5_lower_ankle_bar" name="left_ankle_5_closeda" solref="0.01 1"/>
+	<connect anchor="0. 0. -0.01    " body1="left_5_ankle_ball" body2="left_5_lower_ankle_bar" name="left_ankle_5_closedb" solref="0.01 1"/>
+	<connect anchor="0. 0. 0.01    " body1="left_4_ankle_ball" body2="left_4_lower_ankle_bar" name="left_ankle_4_closeda" solref="0.01 1"/>
+	<connect anchor="0. 0. -0.01   " body1="left_4_ankle_ball" body2="left_4_lower_ankle_bar" name="left_ankle_4_closedb" solref="0.01 1"/-->
+	
+	<connect anchor="0.0075 -0.38 0" body2="left_ankle_roll" body1="left_4_lower_ankle_bar" name="left_ankle_4_closed" solref="0.005 1"/>
+	<connect anchor="0.0075 -0.38 0" body2="left_ankle_roll" body1="left_5_lower_ankle_bar" name="left_ankle_5_closed" solref="0.005 1"/>
+</equality>
+
+</mujoco>

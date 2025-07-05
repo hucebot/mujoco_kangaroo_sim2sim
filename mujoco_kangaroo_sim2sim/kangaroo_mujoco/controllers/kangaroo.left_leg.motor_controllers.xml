@@ -1,0 +1,12 @@
+<mujoco model="kangaroo_left_leg_motor_controllers">
+	
+	<actuator>
+    		<motor name="leg_left_1_actuator_torque" joint="leg_left_1_motor" ctrllimited="true" ctrlrange="-2000. 2000."/> <!-- N -->
+		<motor name="leg_left_2_actuator_torque" joint="leg_left_2_motor" ctrllimited="true" ctrlrange="-2000. 2000."/>
+		<motor name="leg_left_3_actuator_torque" joint="leg_left_3_motor" ctrllimited="true" ctrlrange="-2000. 2000."/>
+		<motor name="leg_left_length_actuator_torque" joint="leg_left_length_motor" ctrllimited="true" ctrlrange="-5000. 5000."/>
+		<motor name="leg_left_4_actuator_torque" joint="leg_left_4_motor" ctrllimited="true" ctrlrange="-2000. 2000."/>
+		<motor name="leg_left_5_actuator_torque" joint="leg_left_5_motor" ctrllimited="true" ctrlrange="-2000. 2000."/>
+  	</actuator>
+
+</mujoco>

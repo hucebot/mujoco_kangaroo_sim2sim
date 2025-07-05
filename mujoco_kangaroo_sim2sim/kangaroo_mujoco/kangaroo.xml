@@ -1,0 +1,58 @@
+<mujoco model="kangaroo">
+    <include file="common.xml" />
+
+    <!-- POSITION CONTROLLERS -->
+    <include file="controllers/kangaroo.left_leg.position_controllers.xml"/>
+    <include file="controllers/kangaroo.right_leg.position_controllers.xml"/>
+    <!-- VELOCITY CONTROLLERS -->
+    <!--include file="controllers/kangaroo.left_leg.velocity_controllers.xml"/>
+    <include file="controllers/kangaroo.right_leg.velocity_controllers.xml"/-->
+    <!-- TORQUE CONTROLLERS -->
+    <!-- <include file="controllers/kangaroo.left_leg.motor_controllers.xml"/>
+    <include file="controllers/kangaroo.right_leg.motor_controllers.xml"/> -->
+
+    <asset>
+        <include file="assets/kangaroo.collision_assets.xml"/>
+        <include file="assets/kangaroo.visual_assets.xml"/>
+    </asset>
+
+    <!-- <contact>
+    	<include file="assets/kangaroo.left_leg.excluded_contacts.xml"/>
+    	<include file="assets/kangaroo.right_leg.excluded_contacts.xml"/>
+    </contact> -->
+    
+    <worldbody>
+        <body name="base_link" pos="0 0 0.98">
+            <inertial pos="-0.055595146648293 8.36342164543691E-05 -0.028686254999856" mass="1.44985482308619" fullinertia="0.00309299205798227 0.00153836707766368 0.003983138735572 -3.80670042011874E-06 3.86368202963533E-05 -2.3617667234584E-07" />
+            <freejoint/>
+            <geom class="visual" rgba="0.15625 0.15625 0.15625 1" mesh="base_link" />
+            <!-- geom class="collision" mesh="base_link_collision" /-->
+
+            <!-- TORSO -->
+            <body name="torso" pos="-0.098647 0 0.031" quat="0.707105 0 0 -0.707108">
+                <inertial pos="-0.000832211043403756 0.0421103212759632 0.167829305663578"
+                        mass="15.2023377849829"
+                        fullinertia="0.144123407263241 0.100896446398784 0.0811134693225461 3.41258125217583E-05 -0.000180350338597435 0.00150970772548264" />
+                <geom class="visual" rgba="0.15625 0.15625 0.15625 1" mesh="torso" />
+                <geom class="collision" mesh="torso_collision" />
+            </body>
+
+            <!-- LEFT LEG -->
+            <include file="parts/kangaroo.left_leg.xml" />
+            <!-- RIGHT LEG -->
+            <include file="parts/kangaroo.right_leg.xml" />
+        </body>
+
+    </worldbody>
+
+
+
+
+   <include file="constraints/kangaroo.left_leg.equality_constraints.xml"/>
+   <include file="constraints/kangaroo.right_leg.equality_constraints.xml"/>
+
+    <keyframe>
+        <key name="stable" ctrl="0 0 0 0 -0.001 -0.001 0 0 0 0 -0.001 -0.001" />
+        <key name="home" qpos= "-1.97499411e-03  1.00100148e+00  9.73054376e-01  9.99988710e-01 -1.21110769e-04 -4.61133421e-03 -1.14040724e-03  2.28796623e-06 -2.09357450e-06  2.13913542e-03  1.27043111e-03  6.78204623e-03 6.77426525e-03  6.79164190e-03 -3.80538798e-02  3.95738118e-04 3.18085730e-02  8.05097508e-02  4.00876507e-02  5.73414642e-03 -5.16344632e-02 -5.16855483e-02 -2.65713842e-05 -4.67826210e-02 -4.68401118e-02 -3.23001794e-05  2.97621326e-05 -9.90780653e-04 1.63770834e-02 -2.13076478e-02  3.20293195e-05 -9.86267278e-04 1.34012013e-02 -2.41953645e-02  1.61392899e-02 -2.45234508e-02 -7.85675596e-02 -8.79662584e-06 -4.49721598e-04 -1.74853279e-04 8.53912480e-06  2.34108377e-04  8.85307511e-05 -2.18649198e-06 -2.13321801e-06 -2.17912032e-03  1.27481601e-03 -6.74363183e-03 -6.73593591e-03 -6.75317156e-03 -3.78375964e-02  3.93490496e-04 3.16412520e-02  8.00841417e-02  3.98617922e-02 -6.10253283e-03 -5.15729366e-02 -5.16236664e-02 -2.69214850e-05 -4.64049885e-02 -4.64624229e-02 -3.24201976e-05  2.97088920e-05 -9.90888912e-04 1.64719002e-02 -2.09988316e-02  1.60577226e-02 -2.43880349e-02 -7.81328869e-02  3.19556814e-05 -9.86095067e-04  1.32942807e-02 -2.40828737e-02 -8.70592844e-06 -4.48198515e-04 -1.74230809e-04 8.47898007e-06  2.31800231e-04  8.76364565e-05"/>
+    </keyframe>
+</mujoco>

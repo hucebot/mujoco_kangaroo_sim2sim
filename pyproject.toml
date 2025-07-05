@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mujoco_kangaroo_sim2sim"
+version = "0.1.0"
+description = "MuJoCo simulation of the Kangaroo robot for sim-to-sim locomotion policy transfer"
+authors = [
+    { name = "Fabio Amadio", email = "fabioamadio93@gmail.com" },
+    { name = "Lorenzo Uttini", email = "uttini.lorenzo@gmail.com" }
+]
+dependencies = [
+    "mujoco",
+    "torch",
+    "numpy",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "black"]
+
+[tool.black]
+line-length = 79
