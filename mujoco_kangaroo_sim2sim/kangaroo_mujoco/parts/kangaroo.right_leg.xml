@@ -1,0 +1,210 @@
+<mujoco model="kangaroo_right_leg">
+
+<body name="right_yaw_motor" pos="-0.11139 -0.080871 -0.0295" quat="0.838675 0 0 0.544632">
+		    <inertial pos="-4.12759e-05 0.0164786 -0.00015095" quat="0.491754 0.51408 0.507135 0.486534" mass="0.69585" diaginertia="0.000299852 0.000207411 0.000191405" />
+		    <joint name="right_yaw_motor_joint" pos="0 0 0" axis="0 0 -1"  range="-3.14159 3.14159" />
+		    <geom class="visual" rgba="0.3125 0.3125 0.3125 1" mesh="Yaw_motor1" />
+		    <!-- geom class="collision" mesh="Yaw_motor1_collision" /-->
+		    <body name="right_yaw_rod" pos="0 -0.0877 0" quat="-2.59734e-06 -2.59735e-06 0.707108 0.707105">
+		        <inertial pos="4.22293e-05 1.30303e-05 0.0477619" quat="1 -2.01782e-05 0.000314368 -1.45758e-06" mass="0.124518" diaginertia="6.62456e-05 6.33915e-05 5.54517e-06" />
+		        <joint name="leg_right_1_motor" pos="0 0 0" axis="0 0 1" type="slide"  range="-0.02 0.02" armature="0.01"/>
+		        <geom class="visual" rgba="0.3125 0.3125 0.3125 1" mesh="Yaw_rod1" />
+		    </body>
+		</body>
+		<body name="right_hip_yaw" pos="-0.015 -0.08 -0.0585" quat="0.707105 0 0 0.707108">
+		    <inertial pos="0.00258003 -0.0184071 -0.000835982" quat="0.719739 -0.0540701 0.0134437 0.692006" mass="0.867837" diaginertia="0.00107851 0.00094694 0.000566359" />
+		    <joint name="leg_right_1_joint" pos="0 0 0" axis="0 0 -1"  range="-0.261799 0.785398" />
+		    <geom class="visual" rgba="0.15625 0.15625 0.15625 1" mesh="Hip_yaw1" />
+		    <!-- geom class="collision" mesh="Hip_yaw1_collision" /-->
+		    <body name="right_hip_pitch" pos="0 -0.015 -0.0925" quat="-0.499977 0.500023 0.499977 -0.500023">
+		    	<inertial pos="-0.00299643 -6.76272e-10 0.000101293" quat="0 0.706726 0 0.707487" mass="0.0907288" diaginertia="3.90471e-05 3.64238e-05 6.10398e-06" />
+		    	<joint name="leg_right_2_joint" pos="0 0 0" axis="0 0 -1"  range="-0.741743 0.741743" />
+		    	<geom class="visual" rgba="0.15625 0.15625 0.15625 1" mesh="Hip_pitch1" />
+	    		<body name="right_hip_roll" pos="0 0 0" quat="0 0.707107 0 0.707107">
+		       	<inertial pos="0.034266 -0.039022 0.0098612" quat="0.996845 0.0323134 0.0722423 0.00612893" mass="2.07276" diaginertia="0.00317337 0.00292998 0.00181726" />
+		        	<joint name="leg_right_3_joint" pos="0 0 0" axis="0 0 -1"  range="-0.471225 0.471225" />
+		        	<geom class="visual" rgba="0.15625 0.15625 0.15625 1" mesh="Hip_roll1" />
+		        	<!-- geom class="collision" mesh="Hip_roll1_collision" /-->
+		        	<body name="right_hip_differential_2_univ" pos="-0.035 0 -0.06" quat="1.34924e-11 -3.67321e-06 1 -3.67321e-06">
+		   		 	<inertial pos="-0.000576673 -0.000569156 0.000883795" quat="0.705765 0.000532559 -0.000520642 0.708446" mass="0.0543984" diaginertia="8.6648e-06 8.12417e-06 1.74562e-06" />
+		    		 	<joint name="right_hip_differential_2_univ_joint" pos="0 0 0" axis="0 0 -1"  range="-3.14159 3.14159" />
+		    		 	<geom class="visual" rgba="0.3125 0.3125 0.3125 1" mesh="Hip_differential_internal_UnivJoint1" />
+				</body>
+				<body name="right_hip_differential_3_univ" pos="0.035 0 -0.06" quat="1.34924e-11 -3.67321e-06 1 -3.67321e-06">
+		    		 	<inertial pos="-0.000576673 -0.000569156 0.000883795" quat="0.708446 0.000520642 -0.000532559 0.705765" mass="0.0543984" diaginertia="8.6648e-06 8.12417e-06 1.74562e-06" />
+		    			<joint name="right_hip_differential_3_univ_joint" pos="0 0 0" axis="0 0 -1"  range="-3.14159 3.14159" />
+		    			<geom class="visual" rgba="0.3125 0.3125 0.3125 1" mesh="Hip_differential_internal_UnivJoint" />
+				</body>
+				<body name="right_femour_pitch" pos="0.0669 -0.09 0" quat="0.707107 0 0.707107 0">
+		    			<inertial pos="0.0581756 -0.0985134 0.000235611" quat="0.45448 0.576658 -0.41105 0.540325" mass="2.17531" diaginertia="0.00982345 0.0096015 0.00160448" />
+		    			<joint name="leg_right_femour_joint" pos="0 0 0" axis="0 0 -1"  range="-3.14159 3.14159" />
+		    			<geom class="visual" rgba="0.15625 0.15625 0.15625 1" mesh="Femour_pitch1" />
+		    			<!-- geom class="collision" mesh="Femour_pitch_collision" /-->
+		    			<body name="right_leg_length_slidinig_nut" pos="0.0686614 -0.238494 0" quat="0.537688 0.459229 0.537688 -0.459229">
+		        			<inertial pos="-0.000256985 0.00147139 -0.0334786" quat="0.738888 -0.0114763 0.0196852 0.673442" mass="0.5431" diaginertia="0.000173544 0.000166097 0.000112441" />
+		        			<joint name="leg_right_length_motor" pos="0 0 0" axis="0 0 -1" type="slide"  range="0 0.15" armature="0.01"/>
+		        			<geom class="visual" rgba="0.3125 0.3125 0.3125 1" mesh="Leg_length_slidinig_nut" />
+		        			<body name="right_leg_length_short_bars" pos="0 0 0" quat="0.537687 -0.459229 -0.53769 0.459229">
+		            				<inertial pos="0.0267413 -0.104163 -1.78443e-07" quat="0.433399 0.558718 -0.433399 0.558718" mass="0.240632" diaginertia="0.000242831 0.000239491 7.35858e-06" />
+		            				<joint name="right_leg_length_short_bars_joint" pos="0 0 0" axis="0 0 -1"  range="-3.14159 3.14159" />
+		            				<geom class="visual" rgba="0. 0.597 0.597 1" mesh="Leg_length_short_bars" />
+		        			</body>
+		    			</body>
+		    			<body name="right_knee" pos="0.129968 -0.357083 0">
+		        			<inertial pos="-0.0212646 -0.118028 -0.000114812" quat="0.551358 0.43995 -0.553219 0.443166" mass="0.621373" diaginertia="0.00120489 0.00113669 0.000229921" />
+		        			<joint name="leg_right_knee_joint" pos="0 0 0" axis="0 0 -1"  range="0. 3.14159" />
+		        			<geom class="visual" rgba="0.15625 0.15625 0.15625 1" mesh="Knee" />
+		        			<!-- geom class="collision" mesh="Knee_collision" /-->
+		        			<body name="right_ankle_pitch" pos="-0.129989 -0.357075 0" quat="0.984808 0 0 -0.173648">
+		    					<inertial pos="-0.00759995 5.88281e-08 6.94997e-09" quat="0.500003 0.499998 0.500002 0.499997" mass="0.0905838" diaginertia="2.98863e-05 2.92763e-05 4.05264e-06" />
+		    					<joint name="leg_right_4_joint" pos="0 0 0" axis="0 0 1"  range="-0.741743 0.741743" />
+		    					<geom class="visual" rgba="0.15625 0.15625 0.15625 1" mesh="Ankle_pitch"/>
+		    					<body name="right_ankle_roll" pos="0 0 0" quat="0.707105 0 0.707108 0">
+		        					<inertial pos="-3.91652e-05 -0.00990525 0.022055" quat="0.698576 -0.10946 0.109446 0.698593" mass="0.413448" diaginertia="0.00138104 0.00117078 0.000258562" />
+		        					<joint name="leg_right_5_joint" pos="0 0 0" axis="0 0 -1"  range="-0.471225 0.471225" />
+		        					<geom class="visual" rgba="0.15625 0.15625 0.15625 1" mesh="Ankle_roll" />
+		        					<geom class="box_collision" size="0.045 0.0125 0.105" pos="0 -0.005 0.04" quat="0.984808 -0.173648 0. 0." name="right_ankle_roll"/>
+		        					<!--body name="right_4_ankle_ball" pos="-0.035 0 -0.06" quat="0.707107 3.40567e-05 0.707107 3.40567e-05">
+		            						<inertial pos="1.33795e-07 -9.56347e-08 -8.49801e-09" quat="0.5 0.5 -0.5 0.5" mass="0.00381364" diaginertia="1.35766e-07 1.01443e-07 1.01443e-07" />
+		            						<joint name="right_4_ankle_ball_joint" pos="0 0 0" axis="0 0.0197329 -0.999805"  range="-3.14159 3.14159" />
+		            						<geom class="visual" rgba="0.15625 0.15625 0.15625 1" mesh="External_ankle_ball" />
+		        					</body>
+		        					<body name="right_5_ankle_ball" pos="0.035 0 -0.06" quat="0.707107 3.40567e-05 0.707107 3.40567e-05">
+		            						<inertial pos="1.33795e-07 -9.56347e-08 -8.49801e-09" quat="0.5 0.5 -0.5 0.5" mass="0.00381364" diaginertia="1.35766e-07 1.01443e-07 1.01443e-07" />
+		            						<joint name="right_5_ankle_ball_joint" pos="0 0 0" axis="0 0.0197329 -0.999805"  range="-3.14159 3.14159" />
+		            						<geom class="visual" rgba="0.15625 0.15625 0.15625 1" mesh="External_ankle_ball" />
+		        					</body-->
+		    					</body>
+						</body>
+						<body name="right_4_butterfly" pos="0 0 0.043">
+		    					<inertial pos="-0.0248716 -0.00598892 0.00506167" quat="0.65931 0.411742 -0.489871 0.39472" mass="0.082315" diaginertia="4.23395e-05 2.49809e-05 2.09854e-05" />
+		    					<joint name="right_4_butterfly_joint" pos="0 0 0" axis="0 0 -1"  range="-3.14159 3.14159" />
+		    					<geom class="visual" rgba="0.3125 0.3125 0.3125 1" mesh="External_butterfly1" />
+		    					<!-- geom class="collision" mesh="External_butterfly1_collision" /-->
+		    					<body name="right_4_knee_ball" pos="-0.056381 0.020521 -0.0005" quat="1.34924e-11 3.67321e-06 -1 -3.67321e-06">
+		        					<inertial pos="3.40809e-12 -8.79985e-12 0" quat="0.5 0.5 -0.5 0.5" mass="0.00195231" diaginertia="4.30053e-08 3.17847e-08 3.17847e-08" />
+								<joint name="right_4_knee_ball_joint" pos="0 0 0" axis="0 0 -1"  range="-3.14159 3.14159" />
+								<geom class="visual" rgba="0.15625 0.15625 0.15625 1" mesh="External_knee_ball" />
+								<body name="right_4_lower_ankle_bar" pos="0 0 0" quat="0.696359 0.12281 -0.696362 0.12281">
+		    							<inertial pos="0.00431894 -0.218831 -6.75122e-08" quat="0.707072 0.707072 0.00697723 0.00697723" mass="0.125467" diaginertia="0.000608718 0.000607712 2.48422e-06" />
+		    							<joint name="right_4_lower_ankle_bar_joint" pos="0 0 0" axis="0 0 -1"  range="-3.14159 3.14159" />
+		    							<geom class="visual" rgba="0 0.597656 0.597656 1" mesh="External_lower_ankle_bar" />
+		    							<!-- geom class="collision" mesh="External_lower_ankle_bar_collision" /-->
+								</body>
+		    					</body>
+						</body>
+						<body name="right_5_butterfly" pos="0 0 -0.043">
+		    					<inertial pos="-0.0248716 -0.00598892 -0.00506167" quat="0.489871 0.39472 -0.65931 0.411742" mass="0.082315" diaginertia="4.23395e-05 2.49809e-05 2.09854e-05" />
+		    					<joint name="right_5_butterfly_joint" pos="0 0 0" axis="0 0 -1"  range="-3.14159 3.14159" />
+		    					<geom class="visual" rgba="0.3125 0.3125 0.3125 1" mesh="External_butterfly" />
+		    					<!-- geom class="collision" mesh="External_butterfly_collision" /-->
+	    						<body name="right_5_knee_ball" pos="-0.056381 0.020521 0.0005" quat="1.34924e-11 3.67321e-06 -1 -3.67321e-06">
+								<inertial pos="3.40809e-12 -8.79985e-12 0" quat="0.5 0.5 -0.5 0.5" mass="0.00195231" diaginertia="4.30053e-08 3.17847e-08 3.17847e-08" />
+								<joint name="right_5_knee_ball_joint" pos="0 0 0" axis="0 0 -1"  range="-3.14159 3.14159" />
+								<geom class="visual" rgba="0.15625 0.15625 0.15625 1" mesh="External_knee_ball" />
+								<body name="right_5_lower_ankle_bar" pos="0 0 0" quat="0.696359 -0.12281 0.696362 0.12281">
+		    							<inertial pos="0.00431894 -0.218831 -6.75122e-08" quat="0.707072 0.707072 0.00697723 0.00697723" mass="0.125467" diaginertia="0.000608718 0.000607712 2.48422e-06" />
+		    							<joint name="right_5_lower_ankle_bar_joint" pos="0 0 0" axis="0 0 -1"  range="-3.14159 3.14159" />
+		    							<geom class="visual" rgba="0 0.597656 0.597656 1" mesh="External_lower_ankle_bar" />
+		    							<!-- geom class="collision" mesh="External_lower_ankle_bar_collision" /-->
+		        					</body>
+		    					</body>
+						</body>
+		    			</body>
+				</body>
+				<body name="right_ankle_4_motor" pos="0.115 -0.04665 0.0750844" quat="0.707107 0 -0.707107 0">
+		    			<inertial pos="0.00976486 0.0132739 -0.00015095" quat="0.641742 0.615224 0.316284 0.331106" mass="0.69585" diaginertia="0.000299852 0.000207411 0.000191405" />
+		    			<joint name="right_ankle_4_motor_joint" pos="0 0 0" axis="0 0 1"  range="-3.14159 3.14159" />
+		    			<geom class="visual" rgba="0.3125 0.3125 0.3125 1" mesh="Ankle_external_motor" />
+		    			<body name="right_ankle_4_rod" pos="-0.0464141 -0.0634252 0" quat="0.630586 0.319939 -0.630586 0.319939">
+		        			<inertial pos="-1.30338e-05 4.22282e-05 -0.0477619" quat="0.707105 -0.000208025 0.000236665 0.707109" mass="0.124518" diaginertia="6.62458e-05 6.33917e-05 5.54517e-06" />
+		        			<joint name="leg_right_4_motor" pos="0 0 0" axis="0 0 -1" type="slide"  range="-0.02 0.02" armature="0.01"/>
+		        			<geom class="visual" rgba="0.3125 0.3125 0.3125 1" mesh="Ankle_external_rod" />
+		    			</body>
+				</body>
+				<body name="right_ankle_4_pendulum" pos="0.115 -0.09 0" quat="0.707107 0 -0.707107 0">
+		    			<inertial pos="0.015271 -0.0163076 -0.00749039" quat="0.255833 0.62847 -0.179908 0.712185" mass="0.0647795" diaginertia="2.48188e-05 2.14378e-05 7.19264e-06" />
+		    			<joint name="right_ankle_4_pendulum_joint" pos="0 0 0" axis="0 0 -1"  range="-3.14159 3.14159" />
+		    			<geom class="visual" rgba="0.3125 0.3125 0.3125 1" mesh="Ankle_external_pendulum1" />
+		    			<body name="right_4_higher_ankle_bar" pos="0.0459627 -0.0385673 0" quat="0 0 -1 0">
+		        			<inertial pos="0.0635711 -0.17466 0.00880435" quat="0.415064 0.565359 -0.395868 0.592773" mass="0.108309" diaginertia="0.000634318 0.000633977 1.61866e-06" />
+		        			<joint name="right_4_higher_ankle_bar_joint" pos="0 0 0" axis="0 0 -1"  range="-3.14159 3.14159" />
+		        			<geom class="visual" rgba="0 0.597656 0.597656 1" mesh="External_higher_ankle_bar1" />
+		        			<!-- geom class="collision" mesh="External_higher_ankle_bar1_collision" /-->
+		    			</body>
+				</body>
+				<body name="right_rear_short_bar" pos="0.0669 -0.017628 0.089372" quat="0.702633 0.0794157 0.702633 0.0794157">
+		    				<inertial pos="1.87854e-07 -0.0450209 -2.80023e-07" quat="0.500004 0.500003 -0.499997 0.499996" mass="0.0877852" diaginertia="1.65445e-05 1.48746e-05 2.86491e-06" />
+		    				<joint name="right_rear_short_bar_joint" pos="0 0 0" axis="0 0 -1"  range="-3.14159 3.14159" />
+		    				<geom class="visual" rgba="0 0.597656 0.597656 1" mesh="Rear_short_bar" />
+		    				<body name="right_rear_triangle" pos="0 -0.09 0">
+		        				<inertial pos="0.0142194 -0.0194738 0.000244328" quat="0.547674 0.44333 -0.551845 0.44607" mass="0.107984" diaginertia="6.55651e-05 5.74616e-05 1.29395e-05" />
+		        				<joint name="right_rear_triangle_joint" pos="0 0 0" axis="0 0 1"  range="-3.14159 3.14159" />
+		        				<geom class="visual" rgba="0.3125 0.3125 0.3125 1" mesh="Rear_triangle" />
+		        				<!-- geom class="collision" mesh="Rear_triangle_collision" /-->
+		        				<body name="right_rear_long_bar" pos="0.0079432 -0.067422 0" quat="0.994748 0 0 0.102355">
+		           	 				<inertial pos="8.99743e-08 -0.202192 -1.24412e-07" quat="0.5 0.5 -0.5 0.5" mass="0.16896" diaginertia="0.000992611 0.000990941 4.89361e-06" />
+		            					<joint name="right_rear_long_bar_joint" pos="0 0 0" axis="0 0 -1"  range="-3.14159 3.14159" />
+		            					<geom class="visual" rgba="0 0.597656 0.597656 1" mesh="Rear_long_bar" />
+		            					<!-- geom class="collision" mesh="Rear_long_bar_collision" /-->
+		        				</body>
+		    				</body>
+				</body>
+				<body name="right_ankle_5_motor" pos="0.019 -0.04665 0.0750844" quat="0.707107 0 -0.707107 0">
+		    			<inertial pos="0.00976486 0.0132739 -0.00015095" quat="0.641742 0.615224 0.316284 0.331106" mass="0.69585" diaginertia="0.000299852 0.000207411 0.000191405" />
+		    			<joint name="right_ankle_5_motor_joint" pos="0 0 0" axis="0 0 1"  range="-3.14159 3.14159" />
+		    			<geom class="visual" rgba="0.3125 0.3125 0.3125 1" mesh="Ankle_external_motor" />
+		    			<body name="right_ankle_5_rod" pos="-0.0464141 -0.0634252 0" quat="0.630586 0.319939 -0.630586 0.319939">
+		        			<inertial pos="-1.30338e-05 4.22282e-05 -0.0477619" quat="0.707105 -0.000208025 0.000236665 0.707109" mass="0.124518" diaginertia="6.62458e-05 6.33917e-05 5.54517e-06" />
+		        			<joint name="leg_right_5_motor" pos="0 0 0" axis="0 0 -1" type="slide"  range="-0.02 0.02" armature="0.01"/>
+		        			<geom class="visual" rgba="0.3125 0.3125 0.3125 1" mesh="Ankle_external_rod" />
+	    				</body>
+				</body>
+				<body name="right_ankle_5_pendulum" pos="0.019 -0.09 0" quat="0.707107 0 -0.707107 0">
+		    			<inertial pos="0.015271 -0.0163076 0.00749039" quat="0.179908 0.712185 -0.255833 0.62847" mass="0.0647795" diaginertia="2.48188e-05 2.14378e-05 7.19264e-06" />
+		    			<joint name="right_ankle_5_pendulum_joint" pos="0 0 0" axis="0 0 -1"  range="-3.14159 3.14159" />
+		    			<geom class="visual" rgba="0.3125 0.3125 0.3125 1" mesh="Ankle_external_pendulum" />
+		    			<body name="right_5_higher_ankle_bar" pos="0.0459627 -0.0385673 0" quat="0 0 -1 0">
+		        			<inertial pos="0.0635711 -0.17466 -0.00880435" quat="0.395868 0.592773 -0.415064 0.565359" mass="0.108309" diaginertia="0.000634318 0.000633977 1.61866e-06" />
+		        			<joint name="right_5_higher_ankle_bar_joint" pos="0 0 0" axis="0 0 -1"  range="-3.14159 3.14159" />
+		        			<geom class="visual" rgba="0 0.597656 0.597656 1" mesh="External_higher_ankle_bar" />
+		        			<!-- geom class="collision" mesh="External_higher_ankle_bar_collision" /-->
+		    			</body>
+				</body>
+		    	</body>
+		    </body>
+		    <body name="right_hip_differential_2_cradle" pos="0.035 -0.0625 0.00015" quat="-2.59734e-06 -2.59735e-06 0.707108 0.707105">
+		    	<inertial pos="-0.00138216 2.16955e-06 0.0105801" quat="0.995555 1.18897e-05 0.0941793 7.06526e-05" mass="0.138052" diaginertia="0.000122729 0.000118601 2.99324e-05" />
+		    	<joint name="right_hip_differential_2_cradle_joint" pos="0 0 0" axis="0 0 -1"  range="-3.14159 3.14159" />
+		    	<geom class="visual" rgba="0.15625 0.15625 0.15625 1" mesh="Hip_differential_internal_cradle2" />
+		    	<!-- geom class="collision" mesh="Hip_differential_internal_cradle22_collision" /-->
+		    	<body name="right_hip_differential_2_motor" pos="0 0 0" quat="-2.59734e-06 0.707105 -2.59735e-06 -0.707108">
+		        	<inertial pos="-0.0022018 0.0166124 -0.000153374" quat="0.472136 0.451722 0.522963 0.547307" mass="0.698684" diaginertia="0.000300396 0.000209312 0.00019332" />
+		        	<joint name="right_hip_differential_2_motor_joint" pos="0 0 0" axis="0 0 -1"  range="-3.14159 3.14159" />
+		        	<geom class="visual" rgba="0.3125 0.3125 0.3125 1" mesh="Hip_differential_internal_motor" />
+		        	<body name="right_hip_differential_2_rod" pos="0.0125 0.09265 0" quat="0.465375 -0.532376 -0.465376 -0.532378">
+		            		<inertial pos="0.000689102 5.28001e-05 -0.0626747" quat="0.706863 6.97452e-05 -0.000303377 0.707351" mass="0.142095" diaginertia="0.000137789 0.000136589 4.89956e-06" />
+		            		<joint name="leg_right_2_motor" pos="0 0 0" axis="0 0 -1" type="slide"  range="-0.04 0.04" armature="0.01"/>
+		            		<geom class="visual" rgba="0.3125 0.3125 0.3125 1" mesh="Hip_differential_internal_rod" />
+		        	</body>
+		    	</body>
+		    </body>
+		    <body name="right_hip_differential_3_cradle" pos="-0.035 -0.0625 0.00015" quat="-2.59734e-06 -2.59735e-06 0.707108 0.707105">
+		    <inertial pos="-0.00138216 2.16955e-06 0.0105801" quat="0.995555 -1.18897e-05 -0.0941793 7.06526e-05" mass="0.138052" diaginertia="0.000122729 0.000118601 2.99324e-05" />
+		    <joint name="right_hip_differential_3_cradle_joint" pos="0 0 0" axis="0 0 -1"  range="-3.14159 3.14159" />
+		    <geom class="visual" rgba="0.15625 0.15625 0.15625 1" mesh="Hip_differential_internal_cradle3" />
+		    <!-- geom class="collision" mesh="Hip_differential_internal_cradle3_collision" /-->
+		    <body name="right_hip_differential_3_motor" pos="0 0 0" quat="-2.59734e-06 0.707105 -2.59735e-06 -0.707108">
+		        <inertial pos="-0.0022018 0.0166124 -0.000153374" quat="0.472136 0.451722 0.522963 0.547307" mass="0.698684" diaginertia="0.000300396 0.000209312 0.00019332" />
+		        <joint name="right_hip_differential_3_motor_joint" pos="0 0 0" axis="0 0 -1"  range="-3.14159 3.14159" />
+		        <geom class="visual" rgba="0.3125 0.3125 0.3125 1" mesh="Hip_differential_internal_motor" />
+		        <body name="right_hip_differential_3_rod" pos="0.0125 0.09265 0" quat="0.465375 -0.532376 -0.465376 -0.532378">
+		            <inertial pos="0.000689102 5.28001e-05 -0.0626747" quat="0.706863 6.97452e-05 -0.000303377 0.707351" mass="0.142095" diaginertia="0.000137789 0.000136589 4.89956e-06" />
+		            <joint name="leg_right_3_motor" pos="0 0 0" axis="0 0 -1" type="slide"  range="-0.04 0.04" armature="0.01"/>
+		            <geom class="visual" rgba="0.3125 0.3125 0.3125 1" mesh="Hip_differential_internal_rod1" />
+		        </body>
+		    </body>
+		</body>
+		</body>
+
+</mujoco>
