@@ -14,6 +14,7 @@ dependencies = [
     "mujoco",
     "torch",
     "numpy",
+    "pyyaml",
 ]
 
 [project.optional-dependencies]
