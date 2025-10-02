@@ -2,12 +2,12 @@
 
   <include file="kangaroo.xml"/>
 
-  <statistic center="0 0 0.55" extent="1.1"/>
-
   <visual>
+    <global cameraid="-1" azimuth="160" elevation="-25" fovy="45"/>
     <headlight diffuse="0.6 0.6 0.6" ambient="0.3 0.3 0.3" specular="0 0 0"/>
     <rgba haze="0.15 0.25 0.35 1"/>
   </visual>
+  <statistic center="0 0 0.8" extent="2"/>
 
   <asset>
         <texture type="skybox" builtin="gradient" rgb1=".3 .5 .7" rgb2="0 0 0" width="32" height="512"/>
